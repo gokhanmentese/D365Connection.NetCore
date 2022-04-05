@@ -12,7 +12,7 @@ namespace CrmService.CrmHelper
         private Guid _controlID;
         private static object _lockObject = new object();
 
-        public IOrganizationService OrganizationService
+        public ServiceClient OrganizationService
         {
             get { return _organizationService; }
         }

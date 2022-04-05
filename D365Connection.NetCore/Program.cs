@@ -1,5 +1,6 @@
 ﻿using CrmService.CrmHelper;
 using Microsoft.Crm.Sdk.Messages;
+using Microsoft.PowerPlatform.Dataverse.Client;
 using System;
 
 namespace D365Connection.NetCore
@@ -9,7 +10,7 @@ namespace D365Connection.NetCore
         static void Main(string[] args)
         {
             var crmServiceSingleton = CrmServiceSingleton.GetService();
-            var crmService = crmServiceSingleton.OrganizationService;
+            ServiceClient crmService = crmServiceSingleton.OrganizationService;
 
             if (crmService == null)
                 System.Console.WriteLine("No Connected to Organization Service!");
